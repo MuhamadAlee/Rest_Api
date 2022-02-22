@@ -29,13 +29,13 @@ Here are some steps to follow
    my_project
       |
       |
-      |--- my_project
+      |--- my_project.
       |
       |
-      |--- my_app
+      |--- my_app.
       |
       |
-      |--- manage.py
+      |--- manage.py.
 
  
         
