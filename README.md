@@ -26,16 +26,16 @@ Here are some steps to follow
          
 6) Now you will have following directory structure
 
-   my_project
-      |
-      |
-      |--- my_project.
-      |
-      |
-      |--- my_app.
-      |
-      |
-      |--- manage.py.
+         my_project
+            |
+            |
+            |--- my_project.
+            |
+            |
+            |--- my_app.
+            |
+            |
+            |--- manage.py.
 
  
         
