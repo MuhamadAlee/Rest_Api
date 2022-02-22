@@ -88,5 +88,11 @@ Here are some steps to follow
 
             ./manage.py runserver
             
+
+13) You can access it by request
             
+            import requests
+            resp=requests.post("http://127.0.0.1:8000/",data={"text":"ALI"})
+            res.json()
+
             
