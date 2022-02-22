@@ -36,7 +36,57 @@ Here are some steps to follow
             |
             |
             |--- manage.py.
+            
+7) Register app in "my_project/my_project/settings.py"
+        
+        INSTALLED_APPS = [
+            ......
+            ......
+            ......
+            
+            'my_app',
+            'rest_framework',
 
+        ]
+8) Make urls.py inside my_app
+            
+            touch urls.py
+            
+9) Make functionality in my_app/views.py
+
+            from rest_framework.decorators import api_view
+            from rest_framework.response import Response
+
+            @api_view(['GET', 'POST'])
+            def Helloworld(request):
+                if request.method == 'POST':
+                    return Response({"message": "Got some data!", "data": request.data.get("text")})
+                return Response({"message": "Hello, world!"})
+               
+
+10) Add urls for "my_project/my_app/urls.py"
+
+            from .views import HelloWorld
+            
+            urlpatterns = [
+                  ....
+            path("",HelloWorld),
+            
+            ]
+            
+11) Now, make urls of my_project refers to the urls of my_app inside "myproject/my_project/urls.py"
+            
+            urlpatterns = [
+                  ....
+            path("",include("my_app.urls")),
+            
+            ]
+      
  
         
- 
+12) Now run server
+
+            ./manage.py runserver
+            
+            
+            
